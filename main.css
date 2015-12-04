@@ -3,11 +3,11 @@ body {
 }
 
 .panel-login {
-position: absolute;
-border: 1px solid black;
-width: 300px;
-left:500px;
-	
+	position: absolute;
+	border: 1px solid black;
+	border-radius: 2px;
+	width: 400px;
+	left: 450px;
 }
 
 .panel-login>.panel-heading {
@@ -36,28 +36,31 @@ left:500px;
 	clear: both;
 	border: 0;
 	height: 1px;
-	
 }
 
 .panel-login input[type="text"],
 .panel-login input[type="email"],
 .panel-login input[type="password"] {
+	position: relative;
+	left: 120px;
 	height: 45px;
 	border: 1px solid #ddd;
+	border-radius: 5px;
 	font-size: 16px;
 	transition: all 0.1s linear;
+	margin-top: 5px;
 }
 
 .panel-login input:hover,
 .panel-login input:focus {
 	outline: none;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
 	box-shadow: none;
 	border-color: #ccc;
 }
 
 .btn-login {
+	position: relative;
+	left: 120px;
 	background-color: #59B2E0;
 	outline: none;
 	color: #fff;
@@ -67,24 +70,16 @@ left:500px;
 	padding: 14px 0;
 	text-transform: uppercase;
 	border-color: #59B2E6;
-}
-
-.btn-login:hover,
-.btn-login:focus {
-	color: #fff;
-	background-color: #53A3CD;
-	border-color: #53A3CD;
+	border-radius: 5px;
+	
 }
 
 .forgot-password {
 	text-decoration: underline;
 	color: #888;
-}
-
-.forgot-password:hover,
-.forgot-password:focus {
-	text-decoration: underline;
-	color: #666;
+	position: relative;
+	left: 100px;
+	margin-top: 10px;
 }
 
 .btn-register {

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     console.log("ready!");
 
 $.ajax({
@@ -69,3 +70,4 @@ challengeCollection.fetch ({
 ////////////////////////////////////////////////////////////
 
 });
+

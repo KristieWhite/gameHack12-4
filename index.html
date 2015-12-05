@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Challenge Accepted</title>
 	<link rel="stylesheet" type="text/css" href="normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/Login.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Login.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 
@@ -23,28 +23,34 @@
 		</div>
 	</div>
 
-<div id="formContainer">
+	<div id="formContainer">
 		<div id="loginContainer">
 			<form>
 				<label for="Username">Username:</label>
-			  	<input type="text" name="email" placeholder="Your Email">
+				<input type="text" name="email" placeholder="Your Email">
 				<label for="password">Password:</label>
-			  	<input type="password" name="pass" placeholder="Password"><br><br>
-			  	<input type="checkbox"><label for="checkbox">Keep me logged in</label>
-			  	<input type="submit" value="Log In">
-		  	</form>
+				<input type="password" name="pass" placeholder="Password">
+				<br>
+				<br>
+				<input type="checkbox">
+				<label for="checkbox">Keep me logged in</label>
+				<input type="submit" value="Log In">
+			</form>
 		</div>
 		<div id="signUpContainer">
 			<form>
 				<label for="signup">Sign Up</label>
-		  		<label for="email">Email:</label><br>
-		  		<input type="text" name="EMAIL" placeholder="New Email">
+				<label for="email">Email:</label>
+				<br>
+				<input type="text" name="EMAIL" placeholder="New Email">
 				<label for="newpass">New Password:</label>
-		  		<input type="text" name="NP" placeholder="Your Password">
+				<input type="text" name="NP" placeholder="Your Password">
 				<label for="cpass">Confirm Password</label>
-		  		<input type="text" placeholder="Confirm password"><br><br>
-		  		<input type="submit" value="Sign Up">
-	  		</form>
+				<input type="text" placeholder="Confirm password">
+				<br>
+				<br>
+				<input type="submit" value="Sign Up">
+			</form>
 		</div>
 	</div>
 
@@ -68,7 +74,7 @@
 
 	<script type="x-tmpl-mustache" id="topRatesTemplate">
 		{{#topRates}}
-		<p><a href="#">{{title}}</a></p>
+		<p><a href="">{{title}}</a></p>
 		{{/topRates}}
 	</script>
 
@@ -83,4 +89,5 @@
 
 
 </body>
+
 </html>

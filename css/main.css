@@ -1,7 +1,8 @@
 body {
-	background-color: aqua;
+	background-color: black;
 	background-repeat: repeat;
 	background-attachment: fixed;
+	color: white;
 }
 
 #headBanner {
@@ -29,6 +30,10 @@ h1 {
 	color: white;
 	font-size: 3em;
 	padding-top: 90px;
+}
+
+#form {
+	float: right;
 }
 
 .panel-login {
@@ -128,4 +133,4 @@ h1 {
 	background-color: #1CA347;
 	border-color: #1CA347;
 }
-
+<<<<<<< HEAD:css/main.css

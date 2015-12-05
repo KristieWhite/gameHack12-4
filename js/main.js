@@ -23,8 +23,18 @@ $(document).ready(function () {
 
 	var router = new Router();
 	
+	router.navigate("/");
+	
 	router.on('route:video' , function(){
-		
+		$("#sub").show();
+		$("#challenge").hide();
+		$("#top").hide();
+	});
+	
+	router.on('route:index' , function(){
+		$("#sub").hide();
+		$("#challenge").show();
+		$("#top").show();
 	});
 
 	

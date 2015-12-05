@@ -15,14 +15,17 @@ $(document).ready(function () {
       Backbone.history.start({pushState: true});
     },
     routes: {
-     "title": "title",
-     "description": "description",
+     "profile": "profile",
 	"video":"video",
       "": "index"
     }
   });
 
 	var router = new Router();
+	
+	router.on('route:video' , function(){
+		
+	});
 
 	
 	var challengeModel = Backbone.Model.extend({
@@ -30,7 +33,7 @@ $(document).ready(function () {
 		},
 		defaults:{
 			"title": null,
-			"description": null,
+			"profile": null,
 			"video": null
 		},
 		Model:challengeModel,
@@ -145,6 +148,6 @@ $(document).ready(function () {
 
 	
 	
-	$("#sub").hide();
+
 	
 });

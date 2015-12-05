@@ -93,6 +93,7 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
 
 
@@ -102,10 +103,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
 
-			<script type="x-tmpl-mustache" id="testTemplate">
-				{{#}}
-				    <></>
-        {{/}}
+			<script type="x-tmpl-mustache" id="challengesTemplate">
+				{{#Challenges}}
+				    <p>{{title}}</p>
+						<p>{{description}}</p>
+						<p>{{video}}</p>
+        {{/Challenges}}
 			</script>
 
 </body>

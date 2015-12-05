@@ -14,7 +14,7 @@
 
 <body>
 
-	<div id="container">
+	
 		<!--Title and Image -->
 		<div id="headBanner">
 			<img class="logo logo2" src="images/challenge.png" />
@@ -23,20 +23,15 @@
 			<div class="container">
 			</div>
 		</div>
-	</div>
+	
 	<div id="something">
-	</div>
-
-
-
-
-
 	</div>
 
 	<div class="challenges_container">
 		<div id="challenge" class="inline"></div>
 		<div id="top" class="inline"></div>
 	</div>
+	<div id="challengeDetail"></div>
 	<div id="sub" class="floatLeft"></div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
@@ -47,25 +42,27 @@
 
 	<script type="x-tmpl-mustache" id="challengesTemplate">
 
-		<h1 class="text_center"> Newest</h1> 
+		<h1 class="text_center">Newest</h1> 
 		{{#challenges}}
 		<div class="challenge_divs">
-			<p><a href="#" class="no_dec">{{title}}</a></p>
+		<p><a href=".detail" class="no_dec">{{title}}</a></p>
 		</div>
 		{{/challenges}}
 	</script>
 
 	<script type="x-tmpl-mustache" id="challengesDetailTemplate">
-		{{#challenges}}
-		<p><a href="#">{{description}}</a></p>
-		{{/challenges}}
+		{{#challengeDetail}}
+		<p>{{title}}</p>
+		<p>{{description}}</p>
+		<p><{{video}}</p>
+		{{/challengeDetail}}
 	</script>
 
 	<script type="x-tmpl-mustache" id="topRatesTemplate">
-		<h1 class="text_center"> Most Popular</h1> {{#topRates}}
+		<h1 class="text_center">Most Popular</h1> 
+		{{#topRates}}
 		<div class="challenge_divs">
-			<p><a href="" class="no_dec">{{title}}</a></p>
-
+		<p><a href="" class="no_dec">{{title}}</a></p>
 		</div>
 		{{/topRates}}
 	</script>

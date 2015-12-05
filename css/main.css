@@ -32,6 +32,10 @@ h1 {
 	padding-top: 90px;
 }
 
+#form {
+	float: right;
+}
+
 .panel-login {
 	position: absolute;
 	border: 1px solid black;
@@ -130,6 +134,3 @@ h1 {
 	border-color: #1CA347;
 }
 <<<<<<< HEAD:css/main.css
-
-=======
->>>>>>> kristie:main.css

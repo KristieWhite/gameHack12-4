@@ -15,14 +15,27 @@ $(document).ready(function () {
       Backbone.history.start({pushState: true});
     },
     routes: {
-     "title": "title",
-     "description": "description",
+     "profile": "profile",
 	"video":"video",
       "": "index"
     }
   });
 
 	var router = new Router();
+	
+	router.navigate("/");
+	
+	router.on('route:video' , function(){
+		$("#sub").show();
+		$("#challenge").hide();
+		$("#top").hide();
+	});
+	
+	router.on('route:index' , function(){
+		$("#sub").hide();
+		$("#challenge").show();
+		$("#top").show();
+	});
 
 	
 	var challengeModel = Backbone.Model.extend({
@@ -30,7 +43,7 @@ $(document).ready(function () {
 		},
 		defaults:{
 			"title": null,
-			"description": null,
+			"profile": null,
 			"video": null
 		},
 		Model:challengeModel,
@@ -142,9 +155,9 @@ $(document).ready(function () {
 			trigger: true
 		});
 	});
+$("#sub").hide();
+	
+	
 
-	
-	
-	$("#sub").hide();
 	
 });

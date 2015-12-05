@@ -11,6 +11,7 @@ $(document).ready(function () {
 	// });
 
 	var Router = Backbone.Router.extend({
+<<<<<<< HEAD
     initialize: function() {
       Backbone.history.start({pushState: true});
     },
@@ -20,6 +21,26 @@ $(document).ready(function () {
       "": "index"
     }
   });
+=======
+
+		initialize: function () {
+			Backbone.history.start({
+				pushState: true
+			});
+		},
+		routes: {
+			"title": "title",
+			"description": "description",
+			"video": "video",
+			"": "index"
+		},
+		defaults: {
+			title: null,
+			description: null,
+			video: null
+		},
+	});
+>>>>>>> 614b0c581d1b39da80c29870f7802b2cf8caa019
 
 	var router = new Router();
 	
@@ -62,7 +83,11 @@ $(document).ready(function () {
 	var challenges = new challengeCollection();
 	challenges.fetch({
 		success: function (resp) {
-			var challengeInfo = {'challenges': resp.toJSON()};
+
+			var challengeInfo = {
+				'challenges': resp.toJSON()
+			};
+			//var partial = {description: description.html() }
 			var challengeTemplate = $("#challengesTemplate").text();
 			var challengesHTML = Mustache.render(challengeTemplate, challengeInfo);	
 			$("#challenge").html(challengesHTML);
@@ -73,8 +98,12 @@ $(document).ready(function () {
 		}
 
 	});
-
-
+//render a challenge detail page
+	//$('#titleClick').on('click', function() {
+	//	$('challenge').html(Mustache.render(challengesDetail.html(), challengeInfo, partial));
+	//	});
+	
+	
 
 	/////////////////////////////Top Rated///////////////////////////////////////
 	// $.ajax({
@@ -134,9 +163,9 @@ $(document).ready(function () {
 			var submissionInfo = {
 				'submissions': resp.toJSON()
 			};
+
 			var submissionTemplate = $("#submissionsTemplate").text();
 			var submissionsHTML = Mustache.render(submissionTemplate, submissionInfo);
-
 			$("#sub").html(submissionsHTML);
 
 		},
@@ -145,8 +174,7 @@ $(document).ready(function () {
 		}
 	});
 
-
-	////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
 	$("body").on('click', 'a', function (e) {
 		e.preventDefault();
 		var href = $(this).attr('href');
@@ -155,9 +183,15 @@ $(document).ready(function () {
 			trigger: true
 		});
 	});
+<<<<<<< HEAD
 $("#sub").hide();
 	
 	
 
+=======
+
+
+	$("#sub").hide();
+>>>>>>> 614b0c581d1b39da80c29870f7802b2cf8caa019
 	
 });

@@ -1,0 +1,45 @@
+#headBanner{
+  background-color: white;
+  margin-bottom: 30px;
+  width: 100%;
+	height: 7em;
+  border-bottom-right-radius:10px;
+  border-bottom-left-radius:10px;
+}
+
+.logo2{
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
+
+.head{
+  display: inline-block;
+}
+
+.no_dec{
+  list-style: none;
+  text-decoration: none;
+}
+
+.challenge_divs{
+  background-color: white;
+  margin: auto auto;
+  width: 50%;
+}
+
+.inline{
+  display: inline-block;
+}
+
+#challenge{
+  width: 50%;
+}
+
+#top{
+  width: 49%;
+}
+
+.text_center{
+  text-align: center;
+}

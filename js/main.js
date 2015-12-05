@@ -18,7 +18,8 @@ $(document).ready(function () {
 		routes: {
 			"title": "title",
 			"description": "description",
-			"video": "video"
+			"video": "video",
+			"": "index"
 		},
 		defaults: {
 			title: null,
@@ -49,6 +50,7 @@ $(document).ready(function () {
 			var challengeInfo = {
 				'challenges': resp.toJSON()
 			};
+			//var partial = {description: description.html() }
 			var challengeTemplate = $("#challengesTemplate").text();
 			var challengesHTML = Mustache.render(challengeTemplate, challengeInfo);
 
@@ -60,8 +62,12 @@ $(document).ready(function () {
 		}
 
 	});
-
-
+//render a challenge detail page
+	//$('#titleClick').on('click', function() {
+	//	$('challenge').html(Mustache.render(challengesDetail.html(), challengeInfo, partial));
+	//	});
+	
+	
 
 	/////////////////////////////Top Rated///////////////////////////////////////
 	// $.ajax({
@@ -120,9 +126,9 @@ $(document).ready(function () {
 			var submissionInfo = {
 				'submissions': resp.toJSON()
 			};
+
 			var submissionTemplate = $("#submissionsTemplate").text();
 			var submissionsHTML = Mustache.render(submissionTemplate, submissionInfo);
-
 			$("#sub").html(submissionsHTML);
 
 		},
@@ -134,7 +140,7 @@ $(document).ready(function () {
 
 
 
-	////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
 	$("body").on('click', 'a', function (e) {
 		e.preventDefault();
 		var href = $(this).attr('href');

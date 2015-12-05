@@ -7,7 +7,7 @@
 	<title>Challenge Accepted</title>
 	<link rel="stylesheet" type="text/css" href="normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/Login.css"/>
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/main2.css" />
 </head>
 
 <body>
@@ -61,7 +61,13 @@
 
 	<script type="x-tmpl-mustache" id="challengesTemplate">
 		{{#challenges}}
-		<p><a href="#">{{title}}</a></p>
+		<p><a href="#titleClick">{{title}}</a></p>
+		<p>{{>description}}</p>
+		{{/challenges}}
+	</script>
+
+	<script type="x-tmpl-mustache" id="challengesDetailTemplate">
+		{{#challenges}}
 		<p><a href="#">{{description}}</a></p>
 		{{/challenges}}
 	</script>

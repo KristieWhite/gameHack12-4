@@ -15,29 +15,17 @@ $(document).ready(function () {
       Backbone.history.start({pushState: true});
     },
     routes: {
-      "title": "title",
-      "description": "description",
-		"video":"video",
+     "title": "title",
+     "description": "description",
+	"video":"video",
       "": "index"
-    },
-	index: function () {
-		$("#challenge").show();
-		$("#top").show();
-		$("#sub").hide();
-		$("#formContainer").hide();
-	},
-		description: function () {
-		$("#challenge").show();
-		$("#top").show();
-		$("#sub").hide();
-		$("#formContainer").hide();
-	}
+    }
   });
 
-
 	var router = new Router();
+
 	
-	var challengeModel = Backbone.Model.extend({	
+	var challengeModel = Backbone.Model.extend({
 		initialize:function(){
 		},
 		defaults:{
@@ -115,6 +103,7 @@ $(document).ready(function () {
 	// }).then(function (resp) {
 	//   console.log(resp);
 	// });
+	
 
 	var submissionModel = Backbone.Model.extend({
 		url: 'https://cryptic-river-3268.herokuapp.com/api/topsubmissionv/'
@@ -145,7 +134,7 @@ $(document).ready(function () {
 
 
 	////////////////////////////////////////////////////////////
-	$("a").on('click', 'a', function (e) {
+	$("body").on('click', 'a', function (e) {
 		e.preventDefault();
 		var href = $(this).attr('href');
 		href = href.substr(1);

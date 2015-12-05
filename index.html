@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/Login.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/main2.css" />
+
 </head>
 
 <body>
@@ -15,7 +17,7 @@
 	<div id="container">
 		<!--Title and Image -->
 		<div id="headBanner">
-			<img class="logo" src="images/Challenge-Accepted.jpg" />
+			<img class="logo logo2" src="images/challenge.png" />
 			<h1 class="head"><a href="#">Challenges</a></h1>
 			<p class="clearFloat"></p>
 			<div class="container">
@@ -54,9 +56,10 @@
 		</div>
 	</div>
 
-
-	<div id="challenge" class="floatLeft"></div>
-	<div id="top" class="floatLeft"></div>
+	<div class="challenges_container">
+		<div id="challenge" class="inline"></div>
+		<div id="top" class="inline"></div>
+	</div>
 	<div id="sub" class="floatLeft"></div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
@@ -66,15 +69,21 @@
 	<script type="text/javascript" src="js/main.js"></script>
 
 	<script type="x-tmpl-mustache" id="challengesTemplate">
+		<h1 class="text_center"> Newest</h1>
 		{{#challenges}}
-		<p><a href="#">{{title}}</a></p>
-		<p><a href="#">{{description}}</a></p>
+		<div class="challenge_divs">
+			<p><a href="#" class="no_dec">{{title}}</a></p>
+		</div>
 		{{/challenges}}
 	</script>
 
 	<script type="x-tmpl-mustache" id="topRatesTemplate">
+		<h1 class="text_center"> Most Popular</h1>
 		{{#topRates}}
-		<p><a href="">{{title}}</a></p>
+		<div class="challenge_divs">
+		<p><a href="" class="no_dec">{{title}}</a></p>
+
+		</div>
 		{{/topRates}}
 	</script>
 

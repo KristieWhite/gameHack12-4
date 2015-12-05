@@ -145,7 +145,6 @@ $(document).ready(function () {
 			var submissionInfo = {
 				'submissions': resp.toJSON()
 			};
-
 			var submissionTemplate = $("#submissionsTemplate").text();
 			var submissionsHTML = Mustache.render(submissionTemplate, submissionInfo);
 			$("#sub").html(submissionsHTML);

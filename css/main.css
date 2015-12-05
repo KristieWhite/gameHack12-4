@@ -2,6 +2,7 @@ body {
 	background-color: aqua;
 	background-repeat: repeat;
 	background-attachment: fixed;
+	color: white;
 }
 
 #headBanner {
@@ -128,4 +129,7 @@ h1 {
 	background-color: #1CA347;
 	border-color: #1CA347;
 }
+<<<<<<< HEAD:css/main.css
 
+=======
+>>>>>>> kristie:main.css

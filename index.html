@@ -96,7 +96,7 @@
 			</div>
 		</div>
 
-	</div>
+
 
 
 	<div>
@@ -104,6 +104,10 @@
 			<p id="video"></p>
 		</ul>
 	</div>
+<div>
+	<p id="top"></p>
+</div>
+
 <div>
 	<p id="sub"></p>
 </div>
@@ -120,6 +124,12 @@
 		{{/challenges}}
 	</script>
 
+	<script type="x-tmpl-mustache" id="topRatesTemplate">
+		{{#topRates}}
+		<p>{{title}}</p>
+		{{/topRates}}
+	</script>
+
 	<script type="x-tmpl-mustache" id="submissionsTemplate">
 		{{#submissions}}
 		<p>{{title}}</p>
@@ -127,6 +137,6 @@
 		<p>{{video}}</p>
 		{{/submissions}}
 	</script>
-
+	</div>
 </body>
 </html>

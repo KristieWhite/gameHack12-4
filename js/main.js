@@ -49,7 +49,36 @@ $(document).ready(function () {
 	});
 
 /////////////////////////////Top Rated////////////////////////////////////
- 
+$.ajax({
+  url: 'https://cryptic-river-3268.herokuapp.com/api/topchallengev/'
+}).then(function (resp) {
+  console.log(resp);
+});
+
+var topRateModel = Backbone.Model.extend({
+  url: 'https://cryptic-river-3268.herokuapp.com/api/topchallengev/'
+});
+
+var topRateCollection = Backbone.Collection.extend({
+  model:topRateModel,
+  url: 'https://cryptic-river-3268.herokuapp.com/api/topchallengev/'
+});
+
+var topRates = new topRateCollection();
+
+topRates.fetch({
+  success: function (resp) {
+    var topRateInfo = {'topRates': resp.toJSON()};
+    var topRateTemplate = $("#topRatesTemplate").text();
+    var topRatesHTML = Mustache.render(topRateTemplate , topRateInfo);
+    $("#sub").html(topRatesHTML);
+    console.log(topRateInfo);
+  },
+  error: function (err) {
+    console.log("error", err);
+  }
+});
+
 //////////////////////////////Submissions/////////////////////////////////
 $.ajax({
   url: 'https://cryptic-river-3268.herokuapp.com/api/topsubmissionv/'
@@ -62,7 +91,7 @@ var submissionModel = Backbone.Model.extend({
 });
 
 var submissionCollection = Backbone.Collection.extend({
-  model: challengeModel,
+  model: submissionModel,
   url: 'https://cryptic-river-3268.herokuapp.com/api/topsubmissionv/'
 });
 

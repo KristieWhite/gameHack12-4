@@ -40,10 +40,15 @@ $(document).ready(function () {
 		$("#challenge").show();
 		$("#top").show();
 	});
-
+	
+	router.on('route:profile', function () {
+		$("#sub").hide();
+		$("#challenge").hide();
+		$("#top").hide();
+	});
 
 	var challengeModel = Backbone.Model.extend({
-		initialize: function () {},
+		initialze: function () {},
 		defaults: {
 			"title": null,
 			"profile": null,
@@ -95,7 +100,9 @@ $(document).ready(function () {
 	// });
 
 	var topRateModel = Backbone.Model.extend({
+		model: topRateModel,
 		url: 'https://cryptic-river-3268.herokuapp.com/api/topchallengev/'
+		
 	});
 
 	var topRateCollection = Backbone.Collection.extend({

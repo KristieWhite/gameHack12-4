@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,26 +24,18 @@
 	</div>
 
 
-
-
-
-<!--
-<iframe id="player" type="text/html" width="640" height="390"
- src="https://www.youtube.com/embed/R54_y3TXyGA"
- frameborder="0"></iframe>
--->
-
-
-
-
-
-
 	<div class="challenges_container">
 
 
 		<div id="challenge" class="inline"></div>
-		<div id="top" class="inline"></div>
-		<div id="sub" class="floatLeft"><a href="/video"></a></div>
+
+		<div id="top" class="inline">
+			<a href="/profile"></a>
+		</div>
+
+		<div id="sub" class="floatLeft">
+			<a href="/video"></a>
+		</div>
 	</div>
 
 
@@ -55,7 +46,6 @@
 	<script type="text/javascript" src="js/main.js"></script>
 
 	<script type="x-tmpl-mustache" id="challengesTemplate">
-
 		<h1 class="text_center"> Newest</h1> {{#challenges}}
 		<div class="challenge_divs">
 			<p><a href="/video" class="no_dec">{{title}}</a></p>
@@ -72,20 +62,22 @@
 	<script type="x-tmpl-mustache" id="topRatesTemplate">
 		<h1 class="text_center"> Most Popular</h1> {{#topRates}}
 		<div class="challenge_divs">
-			<p><a href="" class="no_dec">{{title}}</a></p>
+			<p><a href="/profile" class="no_dec">{{title}}</a></p>
+			<p><a href="/profile">{{description}}</a></p>
+			<iframe id="player" type="text/html" width="640" height="390" src="{{video}}
+ frameborder=" 0 "></iframe>
+		
 		</div>
 		{{/topRates}}
 	</script>
 
 	<!--detail view-->
-	<script type="x-tmpl-mustache" id="submissionsTemplate">
+	<script type="x-tmpl-mustache " id="submissionsTemplate">
 		{{#submissions}}
-		<p><a href="">{{title}}</a></p>
-		<p><a href="">{{description}}</a></p>
-		<iframe id="player" type="text/html" width="640" height="390"
- src="{{video}}
- frameborder="0"></iframe>
-		{{/submissions}}
+		<p><a href="/video">{{title}}</a></p>
+		<p><a href="/video">{{description}}</a></p>
+		<iframe id="player " type="text/html " width="640 " height="390 " src="{{video}} frameborder=" 0 "></iframe>
+			{{/submissions}}
 	</script>
 
 

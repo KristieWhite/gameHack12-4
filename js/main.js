@@ -3,6 +3,7 @@ $(document).ready(function () {
 	console.log("ready!");
 
 	/////////////////////Challenges//////////////////////////////////////////////
+	
 	// $.ajax({
 	// 	url: 'https://cryptic-river-3268.herokuapp.com/api/challengev/'
 	// }).then(function (resp) {
@@ -10,29 +11,36 @@ $(document).ready(function () {
 	// });
 
 	var Router = Backbone.Router.extend({
-		initialize: function () {
-			Backbone.history.start({
-				pushState: true
-			});
-		},
-		routes: {
-			"title": "title",
-			"description": "description",
-			"video": "video"
-		},
-		defaults: {
-			title: null,
-			description: null,
-			video: null
-		},
-	});
+    initialize: function() {
+      Backbone.history.start({pushState: true});
+    },
+    routes: {
+      "title": "title",
+      "description": "description",
+		"video":"video",
+      "": "index"
+    },
+	index: function () {
+		$("#challenge").show();
+		$("#top").show();
+		$("#sub").hide();
+		$("#formContainer").hide();
+	}
+  });
+
 
 	var router = new Router();
-	router.on('route')
-
+	
 	var challengeModel = Backbone.Model.extend({
+		initialize:function(){
+		},
+		defaults:{
+			"title": null,
+			"description": null,
+			"video": null
+		},
+		Model:challengeModel,
 		url: 'https://cryptic-river-3268.herokuapp.com/api/challengev/'
-
 	});
 
 	var challengeCollection = Backbone.Collection.extend({
@@ -43,15 +51,13 @@ $(document).ready(function () {
 
 	/* Titles */
 
+
 	var challenges = new challengeCollection();
 	challenges.fetch({
 		success: function (resp) {
-			var challengeInfo = {
-				'challenges': resp.toJSON()
-			};
+			var challengeInfo = {'challenges': resp.toJSON()};
 			var challengeTemplate = $("#challengesTemplate").text();
-			var challengesHTML = Mustache.render(challengeTemplate, challengeInfo);
-
+			var challengesHTML = Mustache.render(challengeTemplate, challengeInfo);	
 			$("#challenge").html(challengesHTML);
 
 		},
@@ -132,8 +138,6 @@ $(document).ready(function () {
 	});
 
 
-
-
 	////////////////////////////////////////////////////////////
 	$("body").on('click', 'a', function (e) {
 		e.preventDefault();
@@ -142,8 +146,10 @@ $(document).ready(function () {
 		router.navigate(href, {
 			trigger: true
 		});
-
-
 	});
-	$("#formContainer").hide();
+
+	
+	
+	
+	
 });

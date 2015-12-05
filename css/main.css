@@ -3,6 +3,7 @@ body {
 	background-repeat: repeat;
 	background-attachment: fixed;
 	color: white;
+		background-image: url('../images/bg.png')
 }
 
 .floatLeft {

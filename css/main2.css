@@ -15,6 +15,10 @@
 
 .head{
   display: inline-block;
+  text-align: right;
+float: right;
+margin-top: 68px;
+margin-right: 25px;
 }
 
 .no_dec{
@@ -26,6 +30,15 @@
   background-color: white;
   margin: auto auto;
   width: 50%;
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+a:link, a:visited, a:hover{
+  list-style: none;
+  text-decoration: none;
+  color: black;
 }
 
 .inline{

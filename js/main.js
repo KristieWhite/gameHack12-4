@@ -2,6 +2,7 @@ $(document).ready(function () {
 
 	console.log("ready!");
 
+/////////////////////Challenges//////////////////////////////////
 	$.ajax({
 		url: 'https://cryptic-river-3268.herokuapp.com/api/challengev/'
 	}).then(function (resp) {
@@ -26,12 +27,12 @@ $(document).ready(function () {
 	var challengeModel = Backbone.Model.extend({
 		url: 'https://cryptic-river-3268.herokuapp.com/api/challengev/'
 	});
-	
+
 	var challengeCollection = Backbone.Collection.extend({
 		model: challengeModel,
 		url: 'https://cryptic-river-3268.herokuapp.com/api/challengev/'
 	});
-	
+
 	var challenges = new challengeCollection();
 
 	challenges.fetch({
@@ -39,7 +40,7 @@ $(document).ready(function () {
 			var challengeInfo = {'challenges': resp.toJSON()};
 			var challengeTemplate = $("#challengesTemplate").text();
 			var challengesHTML = Mustache.render(challengeTemplate , challengeInfo);
-			$("#video").html(challengesHTML); 
+			$("#video").html(challengesHTML);
 			console.log(challengeInfo);
 		},
 		error: function (err) {
@@ -47,6 +48,38 @@ $(document).ready(function () {
 		}
 	});
 
+/////////////////////////////Top Rated////////////////////////////////////
+ 
+//////////////////////////////Submissions/////////////////////////////////
+$.ajax({
+  url: 'https://cryptic-river-3268.herokuapp.com/api/topsubmissionv/'
+}).then(function (resp) {
+  console.log(resp);
+});
+
+var submissionModel = Backbone.Model.extend({
+  url: 'https://cryptic-river-3268.herokuapp.com/api/topsubmissionv/'
+});
+
+var submissionCollection = Backbone.Collection.extend({
+  model: challengeModel,
+  url: 'https://cryptic-river-3268.herokuapp.com/api/topsubmissionv/'
+});
+
+var submissions = new submissionCollection();
+
+submissions.fetch({
+  success: function (resp) {
+    var submissionInfo = {'submissions': resp.toJSON()};
+    var submissionTemplate = $("#submissionsTemplate").text();
+    var submissionsHTML = Mustache.render(submissionTemplate , submissionInfo);
+    $("#sub").html(submissionsHTML);
+    console.log(submissionInfo);
+  },
+  error: function (err) {
+    console.log("error", err);
+  }
+});
 
 
 	//////////////////////Log In//////////////////////
@@ -67,10 +100,10 @@ $(document).ready(function () {
 		});
 	});
 	////////////////////////////////////////////////////////////
-$(".container").hide();
+//$(".container").hide();
 });
 
 
 var challengeModel = Backbone.Model.extend({
-	
+
 })

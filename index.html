@@ -1,4 +1,4 @@
-n
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,16 +20,19 @@ n
 		<div id="headBanner">
 			<img class="logo logo2" src="images/challenge.png" />
 			<h1 class="head"><a href="/">Challenges</a></h1>
-
 			<p class="clearFloat"></p>
 		</div>
 	</div>
 
-	<div id="something">
-		<h1 class="head"><a href="/video">subs</a></h1>
-	</div>
 
 
+
+
+<!--
+<iframe id="player" type="text/html" width="640" height="390"
+ src="https://www.youtube.com/embed/R54_y3TXyGA"
+ frameborder="0"></iframe>
+-->
 
 
 
@@ -41,8 +44,7 @@ n
 
 		<div id="challenge" class="inline"></div>
 		<div id="top" class="inline"></div>
-
-		<div id="sub" class="floatLeft"></div>
+		<div id="sub" class="floatLeft"><a href="/video"></a></div>
 	</div>
 
 
@@ -56,7 +58,7 @@ n
 
 		<h1 class="text_center"> Newest</h1> {{#challenges}}
 		<div class="challenge_divs">
-			<p><a href="#" class="no_dec">{{title}}</a></p>
+			<p><a href="/video" class="no_dec">{{title}}</a></p>
 		</div>
 		{{/challenges}}
 	</script>
@@ -80,7 +82,9 @@ n
 		{{#submissions}}
 		<p><a href="">{{title}}</a></p>
 		<p><a href="">{{description}}</a></p>
-		<p><a href="">{{video}}</a></p>
+		<iframe id="player" type="text/html" width="640" height="390"
+ src="{{video}}
+ frameborder="0"></iframe>
 		{{/submissions}}
 	</script>
 

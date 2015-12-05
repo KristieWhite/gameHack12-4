@@ -155,7 +155,7 @@ $(document).ready(function () {
 			trigger: true
 		});
 	});
-
+$("#sub").hide();
 	
 	
 

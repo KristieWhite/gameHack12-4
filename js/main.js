@@ -145,6 +145,6 @@ $(document).ready(function () {
 
 	
 	
-	
+	$("#sub").hide();
 	
 });

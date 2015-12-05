@@ -5,17 +5,6 @@ body {
 	color: white;
 }
 
-#headBanner {
-	width: 100%;
-	height: 10em;
-	color: white;
-}
-
-#headBanner > img {
-	width: 200px;
-	padding-right: 4em;
-}
-
 .floatLeft {
 	float: left;
 }
@@ -29,11 +18,4 @@ body {
 h1 {
 	color: white;
 	font-size: 3em;
-	padding-top: 90px;
-}
-
-#top p{ position:relative;
-	left:700px;
-	bottom: 170px;
- 	
 }

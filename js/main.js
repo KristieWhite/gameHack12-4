@@ -32,8 +32,8 @@ $(document).ready(function () {
 		url: 'https://cryptic-river-3268.herokuapp.com/api/challengev/'
 	});
 	
+						/* Titles */
 	var challenges = new challengeCollection();
-
 	challenges.fetch({
 		success: function (resp) {
 			var challengeInfo = {'challenges': resp.toJSON()};
@@ -46,6 +46,8 @@ $(document).ready(function () {
 			console.log("error", err);
 		}
 	});
+	
+	
 
 
 
@@ -67,8 +69,7 @@ $(document).ready(function () {
 		});
 	});
 	////////////////////////////////////////////////////////////
-$(".container").hide();
-});
+$(".container").hide();});
 
 
 var challengeModel = Backbone.Model.extend({

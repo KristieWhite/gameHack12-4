@@ -25,13 +25,19 @@ $(document).ready(function () {
 		$("#top").show();
 		$("#sub").hide();
 		$("#formContainer").hide();
+	},
+		description: function () {
+		$("#challenge").show();
+		$("#top").show();
+		$("#sub").hide();
+		$("#formContainer").hide();
 	}
   });
 
 
 	var router = new Router();
 	
-	var challengeModel = Backbone.Model.extend({
+	var challengeModel = Backbone.Model.extend({	
 		initialize:function(){
 		},
 		defaults:{
@@ -139,7 +145,7 @@ $(document).ready(function () {
 
 
 	////////////////////////////////////////////////////////////
-	$("body").on('click', 'a', function (e) {
+	$("a").on('click', 'a', function (e) {
 		e.preventDefault();
 		var href = $(this).attr('href');
 		href = href.substr(1);

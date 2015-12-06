@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> kenji
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,27 +22,27 @@
 		<!--Title and Image -->
 		<div id="headBanner">
 			<img class="logo logo2" src="images/challenge.png" />
-			<h1 class="head"><a href="/">Challenges</a></h1>
-
+			<h1 class="head"><a href="/">Challenge Accepted</a></h1>
 			<p class="clearFloat"></p>
 		</div>
 	</div>
 
-	<div id="something">
-		<h1 class="head"><a href="/video">subs</a></h1>
-	</div>
-
-
-
-
-
-
-
 
 	<div class="challenges_container">
 		<div id="challenge" class="inline"></div>
+<<<<<<< HEAD
 		<div id="top" class="inline"></div>
 		<div id="sub" class="floatLeft"></div>
+=======
+
+		<div id="top" class="inline">
+			<!--<a href="/profile"></a>-->	
+		</div>
+
+		<div id="sub" class="floatLeft">
+			<a href="/video"></a>
+		</div>
+>>>>>>> kenji
 	</div>
 
 
@@ -50,10 +53,9 @@
 	<script type="text/javascript" src="js/main.js"></script>
 
 	<script type="x-tmpl-mustache" id="challengesTemplate">
-
 		<h1 class="text_center"> Newest</h1> {{#challenges}}
 		<div class="challenge_divs">
-			<p><a href="#" class="no_dec">{{title}}</a></p>
+			<p><a href="/video" class="no_dec">{{title}}</a></p>
 		</div>
 		{{/challenges}}
 	</script>
@@ -65,23 +67,29 @@
 	</script>
 
 	<script type="x-tmpl-mustache" id="topRatesTemplate">
-		<h1 class="text_center"> Most Popular</h1> {{#topRates}}
+		<h1 class="text_center"> Most Popular</h1> 
+		{{#topRates}}
 		<div class="challenge_divs">
-			<p><a href="" class="no_dec">{{title}}</a></p>
+		<p><a href="/profile" class="no_dec">{{title}}</a></p>
+	
+	
 		</div>
 		{{/topRates}}
 	</script>
 
 	<!--detail view-->
-	<script type="x-tmpl-mustache" id="submissionsTemplate">
+	<script type="x-tmpl-mustache " id="submissionsTemplate">
 		{{#submissions}}
-		<p><a href="">{{title}}</a></p>
-		<p><a href="">{{description}}</a></p>
-		<p><a href="">{{video}}</a></p>
-		{{/submissions}}
+		<p class="text_center"><a href="/video">{{title}}</a></p>
+		<p class="text_center"><a href="/video">{{description}}</a></p>
+		<iframe id="player " type="text/html " width="640 " height="390 " src="{{video}} frameborder=" 0 "></iframe>
+			{{/submissions}}
 	</script>
 
 
 </body>
 
 </html>
+
+
+<!--<iframe id="player " type="text/html " width="640 " height="390 " src="{{video}} frameborder=" 0 "></iframe>-->

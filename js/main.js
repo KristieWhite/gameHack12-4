@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-	console.log("ready!");
-
 	/////////////////////Challenges//////////////////////////////////////////////
 
 	// $.ajax({
@@ -85,12 +83,35 @@ $(document).ready(function () {
 		}
 
 	});
-	//render a challenge detail page
-	//$('#titleClick').on('click', function() {
-	//	$('challenge').html(Mustache.render(challengesDetail.html(), challengeInfo, partial));
-	//	});
 
+///////////////render a challenge detail page////////////////////////////////
+	var challengeDetailModel = Backbone.Model.extend({
+		url: 'https://cryptic-river-3268.herokuapp.com/api/challengev/'
+	});
 
+	var challengeDetailCollection = Backbone.Collection.extend({
+		model: challengeDetailModel,
+		url: 'https://cryptic-river-3268.herokuapp.com/api/challengev/'
+	});
+
+	var challengeDetails = new challengeDetailCollection();
+
+	challengeDetails.fetch({
+		success: function (resp) {
+			console.log(resp);
+			var challengeDetailInfo = {
+				'challengeDetails': resp.toJSON()
+			};
+			var challengeDetailTemplate = $("#challengeDetailsTemplate").text();
+			var challengeDetailsHTML = Mustache.render(challengeDetailTemplate, challengeDetailInfo);
+
+			$("#challengeDetail").html(challengeDetailsHTML);
+
+		},
+		error: function (err) {
+			console.log("error", err);
+		}
+	});
 
 	/////////////////////////////Top Rated///////////////////////////////////////
 	// $.ajax({

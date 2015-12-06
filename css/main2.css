@@ -8,8 +8,8 @@
 }
 
 .logo2{
-  height: 100px;
-  width: 100px;
+  height: 110px;
+  width: 140px;
   display: inline-block;
 }
 
@@ -17,7 +17,7 @@
   display: inline-block;
   text-align: right;
 float: right;
-margin-top: 68px;
+margin-top: 55px;
 margin-right: 25px;
 }
 
@@ -55,5 +55,14 @@ a:link, a:visited, a:hover{
 
 .text_center{
   text-align: center;
+}
+
+#player{
+	margin-left: 100px;
+}
+
+iframe {
+	margin-left: 300px;
+	border-radius: 15px;
 }
 

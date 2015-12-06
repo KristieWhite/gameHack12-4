@@ -44,7 +44,7 @@ $(document).ready(function () {
 	router.on('route:profile', function () {
 		$("#sub").hide();
 		$("#challenge").hide();
-		$("#top").hide();
+		$("#top").show();
 	});
 
 	var challengeModel = Backbone.Model.extend({

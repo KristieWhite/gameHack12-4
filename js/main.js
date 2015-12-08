@@ -27,13 +27,19 @@ $(document).ready(function () {
 
 	router.navigate("/");
 
-	router.on('route:video', function () {
+	router.on('route:subVideo', function () {
 		$("#sub").show();
 		$("#challenge").hide();
 		$("#top").hide();
 	});
 
 	router.on('route:index', function () {
+		$("#sub").hide();
+		$("#challenge").show();
+		$("#top").show();
+	});
+
+	router.on('route:popular', function() {
 		$("#sub").hide();
 		$("#challenge").show();
 		$("#top").show();
